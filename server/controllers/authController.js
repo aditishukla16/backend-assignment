@@ -26,8 +26,8 @@ export const registerUser = async (req, res) => {
       token: generateToken(user._id, user.role),
     });
   } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
+  next(error);
+}
 };
 
 
@@ -50,6 +50,6 @@ export const loginUser = async (req, res) => {
       token: generateToken(user._id, user.role),
     });
   } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
+  next(error);
+}
 };

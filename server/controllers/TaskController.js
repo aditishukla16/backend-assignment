@@ -10,7 +10,7 @@ export const createTask = async (req, res) => {
 
     res.status(201).json(task);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    next(error);
   }
 };
 
@@ -27,7 +27,7 @@ export const getTasks = async (req, res) => {
 
     res.json(tasks);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+   next(error);
   }
 };
 
@@ -54,7 +54,7 @@ export const updateTask = async (req, res) => {
 
     res.json(updatedTask);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    next(error);
   }
 };
 
@@ -77,6 +77,6 @@ export const deleteTask = async (req, res) => {
 
     res.json({ message: "Task deleted successfully" });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    next(error);
   }
 };
