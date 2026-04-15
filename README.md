@@ -5,6 +5,7 @@
 - User registration & login with JWT authentication
 - Password hashing using bcrypt
 - Role-based access control (Admin/User)
+- Logout clears JWT token from browser storage
 - Protected CRUD APIs for tasks
 - API versioning (/api/v1)
 - MongoDB schema design
@@ -27,12 +28,19 @@
 - Axios (API requests)
 - JWT-based authentication flow
 
+## Test Admin Credentials
+
+Email: admin@test.com
+Password: admin123
+
+This account has role: admin and can delete any task.
+
 ## Installation
 
 Clone repository:
 
 
-git clone <repo-url>
+git clone https://github.com/aditishukla16/backend-assignment
 
 
 ### Backend Setup
@@ -107,6 +115,8 @@ User:
 Admin:
 - View all tasks
 - Delete any task
+
+
 
 ## Frontend Functionality
 
